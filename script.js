@@ -14,13 +14,11 @@ window.addEventListener('scroll', () => {
   updateActiveLink();
 });
 
-// Hamburger toggle
 hamburger.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
   hamburger.classList.toggle('open', isOpen);
   hamburger.setAttribute('aria-expanded', isOpen);
 });
-
 // Close mobile menu when a link is clicked
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
@@ -28,6 +26,14 @@ mobileLinks.forEach(link => {
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', false);
   });
+});
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!navbar.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+  }
 });
 
 // Active link highlight based on scroll position
