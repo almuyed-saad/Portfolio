@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio of a Mathematics student at SUST — AI, Research, and Web Development." />
+    <title>Almuyed Saad — Mathematics & AI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style-test.css" />
+    
+<style>
+  html { background-color: #0a0a0f; }
+  body { background-color: transparent; margin: 0; overflow-x: hidden; }
+</style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-name">Almuyed</span>
+          <span class="logo-dot">.</span>
+          <span class="logo-tag">Saad</span>
+          <span class="logo-bracket">]</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contact" class="nav-cta">Let's Talk</a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-links">
+          <li><a href="#about" class="mobile-link">About</a></li>
+          <li><a href="#projects" class="mobile-link">Projects</a></li>
+          <li><a href="#skills" class="mobile-link">Skills</a></li>
+          <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="section-label">Welcome to my portfolio</p>
+          <h1 class="hero-title">
+            Hi, I'm <span class="accent">Almuyed Saad</span>
+          </h1>
+          <div class="hero-roles">
+            <span class="role-static">I build </span>
+            <span class="role-dynamic" id="roleDynamic"></span>
+            <span class="role-cursor">|</span>
+          </div>
+          <p class="hero-bio">
+            B.Sc. Mathematics student at <span class="accent-teal">SUST</span>, 
+            exploring the intersection of pure mathematics, artificial intelligence, 
+            and software engineering. Currently building AI-powered tools and 
+            mathematical engines.
+          </p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Get in Touch</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Active Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Love for Math</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-glow"></div>
+          <div class="hero-photo-border">
+            <img src="assets/images/saad.png" alt="Almuyed Saad" class="hero-photo" />
+          </div>
+          <div class="hero-badge badge-top">
+            <span class="badge-dot"></span>
+            <span>Open to opportunities</span>
+          </div>
+          <div class="hero-badge badge-bottom">
+            <span>📍 SUST, Sylhet</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container about-container">
+        <div class="about-content">
+          <p class="section-label">About me</p>
+          <h2 class="section-title">
+            Mathematics meets <span class="accent">Artificial Intelligence</span>
+          </h2>
+          <p class="about-text">
+            I'm <strong>Almuyed Saad</strong>, a B.Sc. Mathematics student at 
+            <span class="accent-teal">Shahjalal University of Science and Technology (SUST)</span>, 
+            Sylhet, Bangladesh. My academic foundation in pure mathematics drives my 
+            curiosity toward building intelligent systems that are both rigorous and practical.
+          </p>
+          <p class="about-text">
+            I believe mathematics is the language of intelligence — and I'm learning 
+            to speak it fluently through AI research, algorithm design, and software 
+            engineering. When I'm not studying proofs, I'm building tools that sit at 
+            the boundary of math and machine learning.
+          </p>
+          <div class="about-interests">
+            <span class="interest-tag">Pure Mathematics</span>
+            <span class="interest-tag">Artificial Intelligence</span>
+            <span class="interest-tag">Machine Learning</span>
+            <span class="interest-tag">Web Development</span>
+            <span class="interest-tag">Algorithm Design</span>
+            <span class="interest-tag">Research</span>
+          </div>
+          <div class="about-actions">
+            <a href="#projects" class="btn-primary">See My Work</a>
+            <a href="assets/cv/saad-cv.pdf" class="btn-secondary" target="_blank">
+              Download CV
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">🎓</div>
+            <div class="about-card-body">
+              <p class="about-card-label">Education</p>
+              <p class="about-card-title">B.Sc. Mathematics</p>
+              <p class="about-card-sub">Shahjalal University of Science & Technology</p>
+              <p class="about-card-meta">Sylhet, Bangladesh · In Progress</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🧠</div>
+            <div class="about-card-body">
+              <p class="about-card-label">Current Focus</p>
+              <p class="about-card-title">AI & Mathematics Engine</p>
+              <p class="about-card-sub">Building SAAD AI — a mathematical reasoning engine powered by machine learning</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📍</div>
+            <div class="about-card-body">
+              <p class="about-card-label">Location</p>
+              <p class="about-card-title">Sylhet, Bangladesh</p>
+              <p class="about-card-sub">Open to remote opportunities worldwide</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">∑</div>
+            <div class="about-card-body">
+              <p class="about-card-label">Fun Fact</p>
+              <p class="about-card-title">Math is my superpower</p>
+              <p class="about-card-sub">I see every coding problem as a math problem waiting to be solved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <p class="section-label">What I've built</p>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="projects-subtitle">
+          A collection of real-world tools built at the intersection of 
+          mathematics, AI, and software engineering.
+        </p>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Live">Live</button>
+          <button class="filter-btn" data-filter="In Progress">In Progress</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label">What I work with</p>
+        <h2 class="section-title">Skills & <span class="accent">Domains</span></h2>
+        <p class="skills-subtitle">
+          Technologies I use to build real projects — honest, no inflated percentages.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-card" data-color="purple">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-inner">
+              <div class="skill-card-top">
+                <span class="skill-domain-icon">🧮</span>
+                <div>
+                  <h3 class="skill-domain-title">Mathematics & Code</h3>
+                  <p class="skill-domain-philosophy">"Where logic meets implementation"</p>
+                </div>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">🐍 Python</span>
+                <span class="skill-pill">⚡ JavaScript</span>
+                <span class="skill-pill">🌐 HTML</span>
+                <span class="skill-pill">🎨 CSS</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-color="teal">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-inner">
+              <div class="skill-card-top">
+                <span class="skill-domain-icon">🤖</span>
+                <div>
+                  <h3 class="skill-domain-title">AI & Machine Learning</h3>
+                  <p class="skill-domain-philosophy">"Teaching machines to think mathematically"</p>
+                </div>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">🤗 HuggingFace</span>
+                <span class="skill-pill">✨ Gemini API</span>
+                <span class="skill-pill">💬 Prompt Engineering</span>
+                <span class="skill-pill">🦙 Groq / Llama</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-color="amber">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-inner">
+              <div class="skill-card-top">
+                <span class="skill-domain-icon">⚡</span>
+                <div>
+                  <h3 class="skill-domain-title">Web & Cloud</h3>
+                  <p class="skill-domain-philosophy">"From local to live, end to end"</p>
+                </div>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">🔥 Firebase</span>
+                <span class="skill-pill">⚛️ React <span class="skill-note">learning</span></span>
+                <span class="skill-pill">💨 Tailwind <span class="skill-note">learning</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card" data-color="rose">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-inner">
+              <div class="skill-card-top">
+                <span class="skill-domain-icon">🛠️</span>
+                <div>
+                  <h3 class="skill-domain-title">Tools & Platforms</h3>
+                  <p class="skill-domain-philosophy">"The craftsman knows his instruments"</p>
+                </div>
+              </div>
+              <div class="skill-pills">
+                <span class="skill-pill">🐙 Git & GitHub</span>
+                <span class="skill-pill">💻 VS Code</span>
+                <span class="skill-pill">🤖 discord.py</span>
+                <span class="skill-pill">🔄 n8n</span>
+                <span class="skill-pill">⚡ Zapier</span>
+                <span class="skill-pill">🌐 WordPress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section id="contact">
+  <div class="container contact-container">
+
+    <p class="section-label">Get in touch</p>
+
+    <h2 class="contact-heading">
+      <span class="ch-word">Let's</span>
+      <span class="ch-word accent">build</span>
+      <span class="ch-word">something</span>
+      <span class="ch-word accent-teal">together.</span>
+    </h2>
+
+    <p class="contact-sub">
+      Open to research collaborations, freelance projects, and interesting opportunities.
+    </p>
+
+    <!-- Terminal email CTA -->
+    <div class="contact-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot" style="background:#f43f5e"></span>
+        <span class="t-dot" style="background:#f59e0b"></span>
+        <span class="t-dot" style="background:#00d4aa"></span>
+        <span class="t-title">message.sh</span>
+      </div>
+      <div class="terminal-body">
+        <p class="t-line">
+          <span class="t-prompt">~$</span>
+          <span class="t-cmd"> send email to</span>
+          <span class="t-string"> "iamsaad236@gmail.com"</span>
+        </p>
+        <p class="t-line t-cursor-line">
+          <span class="t-prompt">~$</span>
+          <span class="t-blink">▋</span>
+        </p>
+        <a href="mailto:iamsaad236@gmail.com" class="terminal-cta">
+          Open Email Client
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Social cards -->
+    <div class="contact-socials">
+
+      <!-- GitHub -->
+      <a href="https://github.com/almuyed-saad" target="_blank" rel="noopener" class="social-card" data-delay="0">
+        <div class="social-card-glow"></div>
+        <div class="social-card-inner">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/>
+          </svg>
+          <div class="social-info">
+            <p class="social-name">GitHub</p>
+            <p class="social-handle">@almuyed-saad</p>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- HuggingFace -->
+      <a href="https://huggingface.co/saad-sust" target="_blank" rel="noopener" class="social-card" data-delay="1">
+        <div class="social-card-glow hf-glow"></div>
+        <div class="social-card-inner">
+          <span class="social-icon" style="font-size:1.5rem;line-height:1;">🤗</span>
+          <div class="social-info">
+            <p class="social-name">HuggingFace</p>
+            <p class="social-handle">saad-sust</p>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:contact.almuyedsaad@gmail.com" class="social-card" data-delay="2">
+        <div class="social-card-glow email-glow"></div>
+        <div class="social-card-inner">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <div class="social-info">
+            <p class="social-name">Email</p>
+            <p class="social-handle">contact.almuyedsaad@gmail.com</p>
+          </div>
+          <svg class="social-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- LinkedIn -->
+      <div class="social-card social-card-disabled" data-delay="3">
+        <div class="social-card-inner">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <div class="social-info">
+            <p class="social-name">LinkedIn</p>
+            <p class="social-handle">Coming soon</p>
+          </div>
+          <span class="social-badge">🔒 Soon</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-name">Almuyed</span>
+        <span class="logo-dot">.</span>
+        <span class="logo-tag">Saad</span>
+        <span class="logo-bracket">]</span>
+      </a>
+      <p class="footer-tagline">Mathematics × AI × Code</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Almuyed Saad · Built with math & coffee ☕</p>
+      <a href="#hero" class="footer-back">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+    <!-- PARTICLE CANVAS MOVED TO BOTTOM FOR BETTER STACKING -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- VANILLA JS PARTICLE ANIMATION -->
+    <script>
+    (function() {
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let W, H;
+        const particles = [];
+        const PARTICLE_COUNT = 80;
+        const CONNECTION_DIST = 150;
+        const MOUSE_DIST = 200;
+        const mouse = { x: -9999, y: -9999 };
+
+        function resize() {
+            W = canvas.width = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        window.addEventListener('mousemove', e => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * W;
+                this.y = Math.random() * H;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.r = Math.random() * 2 + 1;
+                this.alpha = Math.random() * 0.5 + 0.2;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Mouse attraction
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < MOUSE_DIST) {
+                    const force = (MOUSE_DIST - dist) / MOUSE_DIST;
+                    this.vx += (dx / dist) * force * 0.02;
+                    this.vy += (dy / dist) * force * 0.02;
+                }
+
+                // Gentle friction
+                this.vx *= 0.995;
+                this.vy *= 0.995;
+
+                // Wrap around
+                if (this.x < -10) this.x = W + 10;
+                if (this.x > W + 10) this.x = -10;
+                if (this.y < -10) this.y = H + 10;
+                if (this.y > H + 10) this.y = -10;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(124, 106, 247, ${this.alpha})`;
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push(new Particle());
+        }
+
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < CONNECTION_DIST) {
+                        const alpha = (1 - dist / CONNECTION_DIST) * 0.25;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(124, 106, 247, ${alpha})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+            }
+            
+            for (let i = 0; i < particles.length; i++) {
+                const dx = mouse.x - particles[i].x;
+                const dy = mouse.y - particles[i].y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < MOUSE_DIST) {
+                    const alpha = (1 - dist / MOUSE_DIST) * 0.5;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.strokeStyle = `rgba(0, 212, 170, ${alpha})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, W, H);
+            particles.forEach(p => { p.update(); p.draw(); });
+            drawConnections();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    })();
+    </script>
+    
+    <script src="script-test.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "SUST GPA Calculator",
+    "description": "GPA and grade tracker built specifically for SUST Mathematics students. Track courses, credits and grades semester by semester with automatic cumulative GPA calculation, progression charts, and Google cloud sync.",
+    "tags": ["React", "Vite", "Node.js", "PostgreSQL", "Google OAuth"],
+    "status": "Live",
+    "image": "assets/images/p1-gpa.png",
+    "github": "https://github.com/almuyed-saad/sust-gpa",
+    "live": "https://sust-gpa--iamsaad236.replit.app"
+  },
+  {
+    "id": 2,
+    "title": "AI Wealth Tracker",
+    "description": "AI-powered personal finance dashboard. Track expenses, visualize spending with charts, get real-time financial advice from Gemini and Groq AI, export PDF and CSV reports, with full cloud sync via Firebase.",
+    "tags": ["HTML", "CSS", "JavaScript", "Firebase", "Gemini AI", "Chart.js"],
+    "status": "Live",
+    "image": "assets/images/p2-wealth.png",
+    "github": "https://github.com/almuyed-saad/Wealth-Tracker",
+    "live": "https://wealth-tracker-c3fcc.web.app"
+  },
+  {
+    "id": 3,
+    "title": "Ledger — Expense Tracker",
+    "description": "Fast, mobile-friendly expense tracker with monthly budgets, daily spending charts, AI weekly summaries via Gemini, a smoking habit tracker with quit-motivation nudges, and PWA support for phone installation.",
+    "tags": ["React 19", "TanStack", "Supabase", "Tailwind CSS", "Gemini AI"],
+    "status": "Live",
+    "image": "assets/images/p3-ledger.png",
+    "github": "https://github.com/almuyed-saad/ledgerexpenses",
+    "live": "https://ledgerexpenses.lovable.app"
+  },
+  {
+    "id": 4,
+    "title": "SAAD AI — Math Engine",
+    "description": "AI-powered university-level mathematics solver built from scratch. Fine-tuned SmolLM2-1.7B on Kaggle GPU to solve calculus, algebra, real analysis, group theory and number theory with step-by-step academic explanations and LaTeX rendering.",
+    "tags": ["Python", "HuggingFace", "Streamlit", "LoRA", "Unsloth"],
+    "status": "Live",
+    "image": "assets/images/p4-saad-ai.png",
+    "github": "https://github.com/almuyed-saad/math-engine",
+    "live": "https://huggingface.co/spaces/saad-sust/SAAD_AI"
+  },
+  {
+    "id": 5,
+    "title": "Discord GamingBot",
+    "description": "Advanced Discord bot for gaming communities with XP leveling, auto role rewards at milestones, rank card image generation, economy system with daily coins, leaderboards, auto-moderation, and 12+ commands.",
+    "tags": ["Python", "discord.py", "Pillow", "JSON"],
+    "status": "In Progress",
+    "image": "assets/images/p5-gamingbot.png",
+    "github": "https://github.com/almuyed-saad/gamingbot_dashboard",
+    "live": ""
+  }
+]
