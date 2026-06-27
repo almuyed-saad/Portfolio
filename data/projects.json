@@ -49,4 +49,17 @@
     "github": "https://github.com/almuyed-saad/gamingbot_dashboard",
     "live": ""
   }
+{
+  "id": 6,
+  "title": "Premium E-Commerce Store",
+  "description": "Full-stack e-commerce platform with React frontend and Node.js backend. Features JWT authentication, database-backed cart and wishlist, product filtering, dark mode, and smooth Framer Motion animations.",
+  "tags": ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+  "status": "Live",
+  "image": "assets/images/p6-ecommerce-store.png",
+  "github": "https://github.com/almuyed-saad/Ecommerce-Store",
+  "live": "https://ecommerce-demo-saad.vercel.app"
+}
+
+
 ]
+
