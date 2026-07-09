@@ -29,6 +29,17 @@
     "github": "https://github.com/almuyed-saad/Wealth-Tracker",
     "live": "https://wealth-tracker-c3fcc.web.app"
   },
+  
+  {
+  "id": 7,
+  "title": "InvoicePro — SaaS Invoicing",
+  "description": "Full-stack invoicing SaaS for freelancers and small businesses. Create, download, and track professional invoices with PDF export, status tracking (Draft/Sent/Paid), Google OAuth, and Row Level Security via Supabase.",
+  "tags": ["HTML", "CSS", "JavaScript", "Supabase", "Google OAuth", "html2pdf.js"],
+  "status": "Live",
+  "image": "assets/images/p7-invoice-pro.png",
+  "github": "https://github.com/almuyed-saad/invoicepro-saas",
+  "live": "https://invoice-pro-saas.netlify.app"
+},
   {
     "id": 3,
     "title": "Ledger — Expense Tracker",
