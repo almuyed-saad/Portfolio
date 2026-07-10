@@ -105,20 +105,30 @@ typeRole();
 // PROJECTS
 // =====================
 
+const PROJECTS_PER_PAGE = 6;
+let allProjects = [];
+let currentFilter = 'all';
+let visibleCount = PROJECTS_PER_PAGE;
+
 async function loadProjects() {
   try {
     const res  = await fetch('data/projects.json');
     const data = await res.json();
-    renderProjects(data);
-    initFilter(data);
+    allProjects = data;
+    renderProjects();
+    initFilter();
   } catch (err) {
     console.error('Could not load projects:', err);
   }
 }
 
-function renderProjects(projects) {
-  const grid = document.getElementById('projectsGrid');
-  grid.innerHTML = projects.map(p => `
+function getFilteredProjects() {
+  if (currentFilter === 'all') return allProjects;
+  return allProjects.filter(p => p.status === currentFilter);
+}
+
+function createProjectCard(p) {
+  return `
     <div class="project-card" data-status="${p.status}">
       <div class="project-cover-wrap">
         <img
@@ -158,21 +168,59 @@ function renderProjects(projects) {
         </div>
       </div>
     </div>
-  `).join('');
+  `;
 }
 
-function initFilter(data) {
+function renderProjects() {
+  const grid = document.getElementById('projectsGrid');
+  const filtered = getFilteredProjects();
+  const toShow = filtered.slice(0, visibleCount);
+
+  grid.innerHTML = toShow.map(p => createProjectCard(p)).join('');
+
+  // Update load more button
+  updateLoadMoreBtn(filtered.length);
+}
+
+function updateLoadMoreBtn(totalFiltered) {
+  let btn = document.getElementById('loadMoreBtn');
+
+  if (!btn) {
+    btn = document.createElement('div');
+    btn.id = 'loadMoreBtn';
+    btn.innerHTML = `
+      <button class="load-more-btn">
+        Load More
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+    `;
+    document.getElementById('projectsGrid').after(btn);
+
+    btn.querySelector('button').addEventListener('click', () => {
+      visibleCount += PROJECTS_PER_PAGE;
+      renderProjects();
+    });
+  }
+
+  // Show or hide based on remaining projects
+  if (visibleCount >= totalFiltered) {
+    btn.style.display = 'none';
+  } else {
+    btn.style.display = 'flex';
+  }
+}
+
+function initFilter() {
   const btns = document.querySelectorAll('.filter-btn');
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('.project-card').forEach(card => {
-        const match = filter === 'all' || card.dataset.status === filter;
-        card.classList.toggle('hidden', !match);
-      });
+      currentFilter = btn.dataset.filter;
+      visibleCount = PROJECTS_PER_PAGE; // reset count on filter change
+      renderProjects();
     });
   });
 }
