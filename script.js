@@ -8,6 +8,9 @@ const mobileMenu = document.getElementById('mobileMenu');
 const navLinks   = document.querySelectorAll('.nav-link');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
+const currentYear = document.getElementById('currentYear');
+if (currentYear) currentYear.textContent = new Date().getFullYear();
+
 // Scroll: add .scrolled class after 20px
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
@@ -115,6 +118,8 @@ async function loadProjects() {
     const res  = await fetch('data/projects.json');
     const data = await res.json();
     allProjects = data;
+    const projectCount = document.getElementById('activeProjectsCount');
+    if (projectCount) projectCount.textContent = allProjects.length;
     renderProjects();
     initFilter();
   } catch (err) {
