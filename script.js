@@ -8,6 +8,14 @@ const mobileMenu = document.getElementById('mobileMenu');
 const navLinks   = document.querySelectorAll('.nav-link');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
+function closeMobileMenu(restoreFocus = false) {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  if (restoreFocus) hamburger.focus();
+}
+
 const currentYear = document.getElementById('currentYear');
 if (currentYear) currentYear.textContent = new Date().getFullYear();
 
@@ -20,22 +28,23 @@ window.addEventListener('scroll', () => {
 hamburger.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('open');
   hamburger.classList.toggle('open', isOpen);
-  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  mobileMenu.setAttribute('aria-hidden', String(!isOpen));
 });
 // Close mobile menu when a link is clicked
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', false);
+    closeMobileMenu();
   });
 });
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-  if (!navbar.contains(e.target)) {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', false);
+  if (!navbar.contains(e.target)) closeMobileMenu();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+    closeMobileMenu(true);
   }
 });
 
@@ -141,7 +150,10 @@ function createProjectCard(p) {
           alt="${p.title} screenshot"
           class="project-cover"
           loading="lazy"
-          onerror="this.parentElement.style.display='none'"
+          width="1200"
+          height="675"
+          decoding="async"
+          onerror="this.hidden=true; this.parentElement.classList.add('project-cover-fallback')"
         />
       </div>
       <div class="project-body">
@@ -221,8 +233,12 @@ function initFilter() {
   const btns = document.querySelectorAll('.filter-btn');
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
+      btns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       currentFilter = btn.dataset.filter;
       visibleCount = PROJECTS_PER_PAGE; // reset count on filter change
       renderProjects();
