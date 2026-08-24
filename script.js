@@ -129,9 +129,13 @@ async function loadProjects() {
     allProjects = data;
     const projectCount = document.getElementById('activeProjectsCount');
     const liveProjectCount = document.getElementById('liveProjectsCount');
+    const caseStudyCount = document.getElementById('caseStudiesCount');
     if (projectCount) projectCount.textContent = allProjects.length;
     if (liveProjectCount) {
       liveProjectCount.textContent = allProjects.filter(project => project.status === 'Live').length;
+    }
+    if (caseStudyCount) {
+      caseStudyCount.textContent = allProjects.filter(project => project.caseStudy).length;
     }
     renderProjects();
     initFilter();
