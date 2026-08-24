@@ -1543,6 +1543,16 @@ button {
   .contact-socials {
     grid-template-columns: 1fr;
   }
+
+  .contact-socials .social-card {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .social-handle {
+    overflow-wrap: anywhere;
+  }
 }
 
 .social-card {
