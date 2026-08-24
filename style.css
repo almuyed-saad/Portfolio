@@ -2000,3 +2000,17 @@ body {
     flex-direction: column;
   }
 }
+
+.projects-guide {
+  max-width: 48rem;
+  margin: var(--space-md) 0 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.7;
+}
+
+.projects-guide strong {
+  color: var(--accent-teal);
+  font-weight: 500;
+}
