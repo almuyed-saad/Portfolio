@@ -363,12 +363,17 @@
           <span class="t-prompt">~$</span>
           <span class="t-blink">▋</span>
         </p>
-        <a href="mailto:iamsaad236@gmail.com" class="terminal-cta">
-          Open Email Client
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
+        <div class="contact-actions">
+          <a href="mailto:iamsaad236@gmail.com" class="terminal-cta">
+            Open Email Client
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <button type="button" class="copy-email-btn" data-email="iamsaad236@gmail.com">Copy Email</button>
+          <span class="copy-email-status" id="copyEmailStatus" aria-live="polite"></span>
+        </div>
+        <p class="contact-note">No form submission or tracking is required—your email client opens when you choose to contact me.</p>
       </div>
     </div>
 
