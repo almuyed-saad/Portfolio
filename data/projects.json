@@ -1,5 +1,45 @@
 [
   {
+    "id": 8,
+    "title": "Aura Chat — Real-Time Messaging",
+    "description": "Full-stack real-time chat application with authentication, direct messaging, groups, typing indicators, online presence, notifications, media uploads, Web Push, and optional AI features.",
+    "tags": ["React", "Node.js", "MongoDB", "Socket.io", "JWT", "Vercel"],
+    "status": "Live",
+    "image": "assets/images/p8-aura-chat.png",
+    "github": "https://github.com/almuyed-saad/aura-chat",
+    "live": "https://aura-chat-topaz.vercel.app"
+  },
+  {
+    "id": 10,
+    "title": "SAAD & CO Bank — Digital Banking",
+    "description": "Production-oriented simulated banking platform with accounts, transfers, double-entry ledger records, savings goals, beneficiaries, notifications, service workflows, exports, and Google authentication.",
+    "tags": ["React", "Django", "PostgreSQL", "Neon", "Celery", "Vercel"],
+    "status": "Live",
+    "image": "assets/images/p10-saad-co-bank.png",
+    "github": "https://github.com/almuyed-saad/saad-co-bank",
+    "live": "https://saad-co-bank-demo.vercel.app"
+  },
+  {
+    "id": 9,
+    "title": "AI Study Hub",
+    "description": "Full-stack academic workspace for organizing subjects, notes, documents, and learning materials with Markdown editing, autosave, file previews, AI-assisted Socratic chat, and study analytics.",
+    "tags": ["React", "TypeScript", "PostgreSQL", "Drizzle", "Firebase", "Gemini AI"],
+    "status": "Live",
+    "image": "assets/images/p9-ai-study-hub.png",
+    "github": "https://github.com/almuyed-saad/AI-Study-Hub",
+    "live": "https://ai-study-hub-657315790983.asia-southeast1.run.app/"
+  },
+  {
+    "id": 11,
+    "title": "Inkwell — Publishing Platform",
+    "description": "Responsive blog and publishing platform with public posts, search and filtering, Markdown-style formatting, Supabase authentication, an admin panel, and post management workflows.",
+    "tags": ["HTML", "CSS", "JavaScript", "Supabase", "PostgreSQL", "Netlify"],
+    "status": "Live",
+    "image": "assets/images/p11-inkwell-blog.png",
+    "github": "https://github.com/almuyed-saad/inkwell-blog",
+    "live": "https://demoo-blog.netlify.app/"
+  },
+  {
     "id": 6,
     "title": "Premium E-Commerce Store",
     "description": "Full-stack e-commerce platform with React frontend and Node.js backend. Features JWT authentication, database-backed cart and wishlist, product filtering, dark mode, and smooth Framer Motion animations.",
@@ -20,35 +60,14 @@
     "live": "https://sust-gpa-1.onrender.com"
   },
   {
-    "id": 2,
-    "title": "AI Wealth Tracker",
-    "description": "AI-powered personal finance dashboard. Track expenses, visualize spending with charts, get real-time financial advice from Gemini and Groq AI, export PDF and CSV reports, with full cloud sync via Firebase.",
-    "tags": ["HTML", "CSS", "JavaScript", "Firebase", "Gemini AI", "Chart.js"],
+    "id": 7,
+    "title": "InvoicePro — SaaS Invoicing",
+    "description": "Full-stack invoicing SaaS for freelancers and small businesses. Create, download, and track professional invoices with PDF export, status tracking (Draft/Sent/Paid), Google OAuth, and Row Level Security via Supabase.",
+    "tags": ["HTML", "CSS", "JavaScript", "Supabase", "Google OAuth", "html2pdf.js"],
     "status": "Live",
-    "image": "assets/images/p2-wealth.png",
-    "github": "https://github.com/almuyed-saad/Wealth-Tracker",
-    "live": "https://wealth-tracker-c3fcc.web.app"
-  },
-  
-  {
-  "id": 7,
-  "title": "InvoicePro — SaaS Invoicing",
-  "description": "Full-stack invoicing SaaS for freelancers and small businesses. Create, download, and track professional invoices with PDF export, status tracking (Draft/Sent/Paid), Google OAuth, and Row Level Security via Supabase.",
-  "tags": ["HTML", "CSS", "JavaScript", "Supabase", "Google OAuth", "html2pdf.js"],
-  "status": "Live",
-  "image": "assets/images/p7-invoice-pro.png",
-  "github": "https://github.com/almuyed-saad/invoicepro-saas",
-  "live": "https://invoice-pro-saas.netlify.app"
-},
-  {
-    "id": 3,
-    "title": "Ledger — Expense Tracker",
-    "description": "Fast, mobile-friendly expense tracker with monthly budgets, daily spending charts, AI weekly summaries via Gemini, a smoking habit tracker with quit-motivation nudges, and PWA support for phone installation.",
-    "tags": ["React 19", "TanStack", "Supabase", "Tailwind CSS", "Gemini AI"],
-    "status": "Live",
-    "image": "assets/images/p3-ledger.png",
-    "github": "https://github.com/almuyed-saad/ledgerexpenses",
-    "live": "https://ledgerexpenses.lovable.app"
+    "image": "assets/images/p7-invoice-pro.png",
+    "github": "https://github.com/almuyed-saad/invoicepro-saas",
+    "live": "https://invoice-pro-saas.netlify.app"
   },
   {
     "id": 4,
@@ -59,6 +78,26 @@
     "image": "assets/images/p4-saad-ai.png",
     "github": "https://github.com/almuyed-saad/math-engine",
     "live": "https://huggingface.co/spaces/saad-sust/SAAD_AI"
+  },
+  {
+    "id": 2,
+    "title": "AI Wealth Tracker",
+    "description": "AI-powered personal finance dashboard. Track expenses, visualize spending with charts, get real-time financial advice from Gemini and Groq AI, export PDF and CSV reports, with full cloud sync via Firebase.",
+    "tags": ["HTML", "CSS", "JavaScript", "Firebase", "Gemini AI", "Chart.js"],
+    "status": "Live",
+    "image": "assets/images/p2-wealth.png",
+    "github": "https://github.com/almuyed-saad/Wealth-Tracker",
+    "live": "https://wealth-tracker-c3fcc.web.app"
+  },
+  {
+    "id": 3,
+    "title": "Ledger — Expense Tracker",
+    "description": "Fast, mobile-friendly expense tracker with monthly budgets, daily spending charts, AI weekly summaries via Gemini, a smoking habit tracker with quit-motivation nudges, and PWA support for phone installation.",
+    "tags": ["React 19", "TanStack", "Supabase", "Tailwind CSS", "Gemini AI"],
+    "status": "Live",
+    "image": "assets/images/p3-ledger.png",
+    "github": "https://github.com/almuyed-saad/ledgerexpenses",
+    "live": "https://ledgerexpenses.lovable.app"
   },
   {
     "id": 5,
