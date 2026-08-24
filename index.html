@@ -3,8 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal portfolio of a Mathematics student at SUST — AI, Research, and Web Development." />
-    <title>Almuyed Saad — Mathematics & AI</title>
+    <meta name="description" content="Almuyed Saad is a Mathematics student at SUST building practical AI systems, full-stack products, and mathematical software." />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Almuyed Saad — Mathematics, AI & Software Engineering" />
+    <meta property="og:description" content="A portfolio of practical AI systems, full-stack products, and mathematical software." />
+    <meta property="og:image" content="assets/images/saad.png" />
+    <meta property="og:image:alt" content="Almuyed Saad — Mathematics, AI & Software Engineering" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Almuyed Saad — Mathematics, AI & Software Engineering" />
+    <meta name="twitter:description" content="A portfolio of practical AI systems, full-stack products, and mathematical software." />
+    <meta name="twitter:image" content="assets/images/saad.png" />
+    <title>Almuyed Saad — Mathematics, AI & Software Engineering</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Almuyed Saad",
+        "jobTitle": "Mathematics Student and Software Developer",
+        "description": "Mathematics student building practical AI systems, full-stack products, and mathematical software.",
+        "sameAs": [
+          "https://github.com/almuyed-saad",
+          "https://huggingface.co/saad-sust"
+        ]
+      }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +89,7 @@
       <div class="hero-grid-bg"></div>
       <div class="container hero-container">
         <div class="hero-content">
-          <p class="section-label">Welcome to my portfolio</p>
+          <p class="section-label">Mathematics · AI · Software Engineering</p>
           <h1 class="hero-title">
             Hi, I'm <span class="accent">Almuyed Saad</span>
           </h1>
@@ -75,10 +99,9 @@
             <span class="role-cursor">|</span>
           </div>
           <p class="hero-bio">
-            B.Sc. Mathematics student at <span class="accent-teal">SUST</span>, 
-            exploring the intersection of pure mathematics, artificial intelligence, 
-            and software engineering. Currently building AI-powered tools and 
-            mathematical engines.
+            B.Sc. Mathematics student at <span class="accent-teal">SUST</span> building
+            practical AI systems, full-stack products, and mathematical software.
+            Open to research collaborations, freelance work, and software opportunities.
           </p>
           <div class="hero-btns">
             <a href="#projects" class="btn-primary">View Projects</a>
@@ -91,8 +114,8 @@
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
-              <span class="stat-number">3+</span>
-              <span class="stat-label">Years Coding</span>
+              <span class="stat-number" id="liveProjectsCount">10</span>
+              <span class="stat-label">Live Projects</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
@@ -133,10 +156,10 @@
             curiosity toward building intelligent systems that are both rigorous and practical.
           </p>
           <p class="about-text">
-            I believe mathematics is the language of intelligence — and I'm learning 
-            to speak it fluently through AI research, algorithm design, and software 
-            engineering. When I'm not studying proofs, I'm building tools that sit at 
-            the boundary of math and machine learning.
+            I believe mathematics is the language of intelligence — and I explore that
+            idea through AI research, algorithm design, and software engineering. My work
+            spans study tools, real-time collaboration, financial simulations, and
+            mathematical reasoning systems.
           </p>
           <div class="about-interests">
             <span class="interest-tag">Pure Mathematics</span>
@@ -206,9 +229,10 @@
           A collection of real-world tools built at the intersection of 
           mathematics, AI, and software engineering.
         </p>
-        <div class="projects-filter" role="group" aria-label="Filter projects by status">
+        <div class="projects-filter" role="group" aria-label="Filter projects by type and status">
           <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
           <button class="filter-btn" type="button" data-filter="Live" aria-pressed="false">Live</button>
+          <button class="filter-btn" type="button" data-filter="featured" aria-pressed="false">Featured</button>
           <button class="filter-btn" type="button" data-filter="In Progress" aria-pressed="false">In Progress</button>
         </div>
         <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
@@ -314,7 +338,7 @@
     </h2>
 
     <p class="contact-sub">
-      Open to research collaborations, freelance projects, and interesting opportunities.
+      Open to research collaborations, freelance product work, and software engineering opportunities. If you have a problem worth solving, let's talk.
     </p>
 
     <!-- Terminal email CTA -->
