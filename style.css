@@ -1964,12 +1964,21 @@ body {
   }
 }
 
+.contact-email-role {
+  margin: var(--space-lg) 0 var(--space-sm);
+  color: var(--accent-teal);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .contact-actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-md);
-  margin-top: var(--space-lg);
+  margin-top: 0;
 }
 
 .contact-actions > .terminal-cta,
