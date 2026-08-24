@@ -181,6 +181,10 @@ function createProjectCard(p) {
         </div>
         <div class="project-links">
           ${sourceLink}
+          ${p.caseStudy ? `
+          <button type="button" class="project-link case-study-btn" data-project-id="${p.id}" aria-label="Open case study for ${p.title}">
+            Case Study
+          </button>` : ''}
           ${p.live ? `
           <a href="${p.live}" target="_blank" rel="noopener" class="project-link live-link">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -202,9 +206,59 @@ function renderProjects() {
   const toShow = filtered.slice(0, visibleCount);
 
   grid.innerHTML = toShow.map(p => createProjectCard(p)).join('');
+  initCaseStudyButtons();
 
   // Update load more button
   updateLoadMoreBtn(filtered.length);
+}
+
+function initCaseStudyButtons() {
+  document.querySelectorAll('.case-study-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const project = allProjects.find(item => String(item.id) === button.dataset.projectId);
+      if (project?.caseStudy) openCaseStudy(project);
+    });
+  });
+}
+
+function openCaseStudy(project) {
+  let dialog = document.getElementById('caseStudyDialog');
+  if (!dialog) {
+    dialog = document.createElement('dialog');
+    dialog.id = 'caseStudyDialog';
+    dialog.className = 'case-study-dialog';
+    dialog.setAttribute('aria-labelledby', 'caseStudyTitle');
+    dialog.innerHTML = `
+      <div class="case-study-panel">
+        <button type="button" class="case-study-close" aria-label="Close case study">×</button>
+        <p class="section-label">Project case study</p>
+        <h2 id="caseStudyTitle" class="case-study-title"></h2>
+        <p class="case-study-category"></p>
+        <div class="case-study-grid">
+          <section><h3>Problem</h3><p data-case-study="problem"></p></section>
+          <section><h3>My role</h3><p data-case-study="role"></p></section>
+          <section><h3>Result</h3><p data-case-study="result"></p></section>
+          <section><h3>Highlights</h3><ul data-case-study="highlights"></ul></section>
+        </div>
+        <div class="case-study-actions"></div>
+      </div>
+    `;
+    document.body.appendChild(dialog);
+    dialog.querySelector('.case-study-close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+
+  const study = project.caseStudy;
+  dialog.querySelector('#caseStudyTitle').textContent = project.title;
+  dialog.querySelector('.case-study-category').textContent = project.category || 'Project';
+  dialog.querySelector('[data-case-study="problem"]').textContent = study.problem;
+  dialog.querySelector('[data-case-study="role"]').textContent = study.role;
+  dialog.querySelector('[data-case-study="result"]').textContent = study.result;
+  dialog.querySelector('[data-case-study="highlights"]').innerHTML = study.highlights.map(item => `<li>${item}</li>`).join('');
+  dialog.querySelector('.case-study-actions').innerHTML = `${project.live ? `<a href="${project.live}" target="_blank" rel="noopener" class="btn-primary">Open live demo</a>` : ''}${project.github && project.source !== 'private' ? `<a href="${project.github}" target="_blank" rel="noopener" class="btn-secondary">View source</a>` : ''}`;
+  dialog.showModal();
 }
 
 function updateLoadMoreBtn(totalFiltered) {
@@ -237,6 +291,23 @@ function updateLoadMoreBtn(totalFiltered) {
   }
 }
 
+function initEmailCopy() {
+  const button = document.querySelector('.copy-email-btn');
+  const status = document.getElementById('copyEmailStatus');
+  if (!button || !status) return;
+
+  button.addEventListener('click', async () => {
+    const email = button.dataset.email;
+    try {
+      await navigator.clipboard.writeText(email);
+      status.textContent = 'Email copied';
+    } catch {
+      status.textContent = email;
+    }
+    window.setTimeout(() => { status.textContent = ''; }, 2200);
+  });
+}
+
 function initFilter() {
   const btns = document.querySelectorAll('.filter-btn');
   btns.forEach(btn => {
@@ -255,6 +326,7 @@ function initFilter() {
 }
 
 loadProjects();
+initEmailCopy();
 
 // =====================
 // SKILLS — SCROLL ENTRANCE

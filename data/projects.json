@@ -10,7 +10,13 @@
     "image": "assets/images/p8-aura-chat.png",
     "github": "https://github.com/almuyed-saad/aura-chat",
     "live": "https://aura-chat-topaz.vercel.app",
-    "source": "public"
+    "source": "public",
+    "caseStudy": {
+      "problem": "People need fast, expressive communication with presence and group workflows in one place.",
+      "role": "Designed and implemented the full-stack messaging experience, including real-time events, authentication, media, and notifications.",
+      "highlights": ["Direct and group messaging with Socket.io", "Typing, presence, read state, and Web Push", "JWT authentication with uploads and optional AI assistance"],
+      "result": "A deployable real-time communication product demonstrating event-driven full-stack architecture."
+    }
   },
   {
     "id": 10,
@@ -23,7 +29,13 @@
     "image": "assets/images/p10-saad-co-bank.png",
     "github": "https://github.com/almuyed-saad/saad-co-bank",
     "live": "https://saad-co-bank-demo.vercel.app",
-    "source": "private"
+    "source": "private",
+    "caseStudy": {
+      "problem": "A banking interface must make account state, transfers, and financial actions easy to understand while keeping ledger behavior consistent.",
+      "role": "Built the product flow and backend simulation across accounts, transfers, ledger records, savings, services, and authentication.",
+      "highlights": ["Account, transfer, beneficiary, and savings workflows", "Double-entry ledger simulation with exports", "Demo-only environment with Google authentication and notifications"],
+      "result": "A safe banking environment for exploring realistic financial workflows without real money."
+    }
   },
   {
     "id": 9,
@@ -36,7 +48,13 @@
     "image": "assets/images/p9-ai-study-hub.png",
     "github": "https://github.com/almuyed-saad/AI-Study-Hub",
     "live": "https://ai-study-hub-657315790983.asia-southeast1.run.app/",
-    "source": "public"
+    "source": "public",
+    "caseStudy": {
+      "problem": "Students need a focused workspace that connects notes, documents, tasks, and guided AI assistance instead of scattering study work across separate tools.",
+      "role": "Designed and built the academic workspace, synchronized study data, document flows, analytics, and AI-assisted learning interactions.",
+      "highlights": ["Subjects, notes, assignments, planner, and document workspace", "Markdown editing, autosave, and PDF previews", "Socratic AI assistant, quizzes, flashcards, and study analytics"],
+      "result": "A unified study environment that combines organization with guided, AI-assisted learning."
+    }
   },
   {
     "id": 4,
@@ -49,7 +67,13 @@
     "image": "assets/images/p4-saad-ai.png",
     "github": "https://github.com/almuyed-saad/math-engine",
     "live": "https://huggingface.co/spaces/saad-sust/SAAD_AI",
-    "source": "public"
+    "source": "public",
+    "caseStudy": {
+      "problem": "University-level mathematics often needs explanations that are structured, step-by-step, and readable in proper mathematical notation.",
+      "role": "Trained and integrated a mathematics-focused language model, then built the reasoning interface and LaTeX presentation layer.",
+      "highlights": ["Fine-tuned SmolLM2-1.7B with LoRA and Unsloth", "Coverage across calculus, algebra, analysis, group theory, and number theory", "Step-by-step responses with rendered LaTeX explanations"],
+      "result": "A public mathematical reasoning prototype connecting model training, evaluation, and an accessible web interface."
+    }
   },
   {
     "id": 11,
