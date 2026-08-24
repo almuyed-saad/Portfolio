@@ -1962,14 +1962,25 @@ body {
   margin-top: var(--space-lg);
 }
 
+.contact-actions > .terminal-cta,
+.contact-actions > .copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 2.75rem;
+  margin-top: 0;
+  padding: 0.7rem 1.4rem;
+  line-height: 1.2;
+}
+
 .copy-email-btn {
-  padding: 0.7rem 1rem;
   border: 1px solid var(--border-hover);
   border-radius: var(--radius-sm);
   background: transparent;
   color: var(--text-secondary);
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
+  font-weight: 500;
   transition: color var(--transition), border-color var(--transition), background var(--transition);
 }
 
