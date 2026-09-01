@@ -1,0 +1,25 @@
+name: Check portfolio links
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "link-checks"
+  cancel-in-progress: true
+
+jobs:
+  check-links:
+    name: Check public portfolio links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check links
+        run: ./scripts/check-links.sh
