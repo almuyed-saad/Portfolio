@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Clinic Appointment Booking System",
+    "description": "End-to-end dental clinic booking system: patients book via form, get confirmation + 24h/1h email reminders, can self-cancel through a secure link, and the clinic owner gets a live HTML dashboard of today's, upcoming, and cancelled bookings.",
+    "case_study": "Built for a dental clinic drowning in manual scheduling calls. The flow chains 4 workflows: booking capture, a two-step cancel-confirmation to avoid accidental cancels, and a real-time dashboard. Cut no-shows with automated reminders and gave the owner a single glance view of their day.",
+    "tags": ["Webhook", "Gmail", "Telegram", "HTML Dashboard"],
+    "images": ["assets/images/wf1-clinic-booking.png", "assets/images/wf1-clinic-cancel1.png", "assets/images/wf1-clinic-cancel2.png", "assets/images/wf1-clinic-dashboard.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/clinic-booking-system"
+  },
+  {
+    "id": 2,
+    "title": "RAG Chatbot Demo",
+    "description": "Retrieval-augmented chatbot: FAQ text is chunked and embedded via Gemini into a Supabase vector store, then a chat interface answers questions using the closest retrieved chunks, powered by Groq.",
+    "case_study": "A portfolio demo showing a full RAG pipeline — not just a wrapper around an LLM. Ingest workflow handles chunking + embedding; the chatbot workflow does similarity search and grounds answers in retrieved context instead of hallucinating from the model alone.",
+    "tags": ["Gemini", "Supabase Vector DB", "Groq", "RAG"],
+    "images": ["assets/images/wf2-rag-ingest.png", "assets/images/wf2-rag-chatbot.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/rag-chatbot-demo"
+  },
+  {
+    "id": 3,
+    "title": "AI B2B Lead Intelligence & CRM Pipeline",
+    "description": "Sample leads flow through deduplication, ICP rule filtering, enrichment, and Groq AI scoring with written reasoning. High-score leads need human approval via Telegram before being saved to a Google Sheets CRM, with a daily summary report.",
+    "case_study": "Designed to keep a human in the loop for high-value leads instead of full automation blind spots. AI does the heavy lifting — scoring and reasoning — but nothing enters the CRM without a Telegram approval tap, balancing speed with control.",
+    "tags": ["Groq AI", "Telegram Approval", "Google Sheets CRM"],
+    "images": ["assets/images/wf3-lead-crm.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/lead-intelligence-crm"
+  },
+  {
+    "id": 4,
+    "title": "Lead Qualification & Auto-Response",
+    "description": "Webhook-triggered lead qualification: receives Tally form submissions, scores leads Hot/Warm/Cold via AI, logs every lead to a Google Sheets CRM, and routes accordingly — Hot leads get a drafted reply + Telegram alert, Warm leads get an automatic follow-up.",
+    "case_study": "Built to remove response-time lag on inbound leads. Every submission gets scored and logged automatically; only the highest-value leads interrupt a human, so nothing sits unread while still keeping fast replies on the leads that matter most.",
+    "tags": ["Tally Forms", "AI Scoring", "Telegram", "Google Sheets"],
+    "images": ["assets/images/wf4-lead-qualification.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/lead-qualification-auto-response"
+  },
+  {
+    "id": 5,
+    "title": "Email Assistant",
+    "description": "Full email-assistant lifecycle in one workflow: Gmail-triggered classification and drafting, Telegram-triggered approval handling (Send/Edit/Reject), and hourly reminder checks — all sharing a pending-replies data table.",
+    "case_study": "Solves inbox overload without losing control of tone or accuracy. AI drafts replies automatically, but every send goes through a Telegram approve/edit/reject step, with hourly nudges so nothing drafted gets forgotten.",
+    "tags": ["Gmail", "AI Drafting", "Telegram Approval"],
+    "images": ["assets/images/wf5-email-assistant.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/email-assistant"
+  },
+  {
+    "id": 6,
+    "title": "Daily News Digest",
+    "description": "Fetches BBC + Al Jazeera world news daily at 8am (Asia/Dhaka), uses Groq AI to pick and summarize the top stories, then sends the digest straight to Telegram.",
+    "case_study": "A small personal-productivity automation — replaces manually scanning multiple news sites each morning with one AI-curated summary delivered on a schedule, no app-switching required.",
+    "tags": ["Scheduled Trigger", "Groq AI", "Telegram"],
+    "images": ["assets/images/wf6-news-digest.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/daily-news-digest"
+  },
+  {
+    "id": 7,
+    "title": "FB Auto Post with Telegram Approval",
+    "description": "Telegram-triggered Facebook page auto-poster: send a topic, Gemini writes the post copy and Pollinations generates the image, approve or decline right in Telegram, and approved posts go live on the FB Page.",
+    "case_study": "Built for lightweight social content production without a full design/copy pipeline. One Telegram message becomes a fully drafted post with matching AI-generated art — human approval stays the final gate before anything goes public.",
+    "tags": ["Telegram", "Gemini", "Pollinations AI", "Facebook API"],
+    "images": ["assets/images/wf7-fb-autopost.png"],
+    "github": "https://github.com/almuyed-saad/n8n-automation-portfolio/tree/main/fb-auto-post-telegram"
+  }
+]

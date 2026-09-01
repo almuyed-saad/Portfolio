@@ -1707,3 +1707,120 @@ body {
   color: #fff;
   transform: translateY(-2px);
 }
+
+/* =====================
+   AUTOMATION & WORKFLOWS
+   ===================== */
+#automation {
+  padding-block: var(--space-3xl);
+  border-top: 1px solid var(--border);
+}
+
+.automation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.auto-card {
+  background: linear-gradient(180deg, rgba(0, 212, 170, 0.05), rgba(26, 26, 46, 0.7));
+  border: 1px solid rgba(0, 212, 170, 0.18);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.auto-card:hover {
+  border-color: var(--accent-teal);
+  transform: translateY(-4px);
+}
+
+/* Screenshot strip */
+.auto-shots {
+  display: flex;
+  gap: 2px;
+  height: 150px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.2);
+}
+
+.auto-shots img {
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.auto-card:hover .auto-shots img {
+  transform: scale(1.04);
+}
+
+.auto-body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.auto-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.auto-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Case study toggle */
+.auto-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent-teal);
+  width: fit-content;
+  padding: 0;
+}
+
+.auto-toggle svg {
+  transition: transform var(--transition);
+}
+
+.auto-toggle.open svg {
+  transform: rotate(180deg);
+}
+
+.auto-case {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-style: italic;
+  border-left: 2px solid var(--accent-teal);
+  padding-left: var(--space-md);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
+  margin: 0;
+}
+
+.auto-case.open {
+  max-height: 300px;
+  opacity: 1;
+  margin-block: 4px;
+}
+
+@media (max-width: 768px) {
+  .automation-grid {
+    grid-template-columns: 1fr;
+  }
+}
